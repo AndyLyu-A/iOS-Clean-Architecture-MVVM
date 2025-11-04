@@ -29,6 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        CoreDataStorage.shared.saveContext()
+        // TODO: Save any pending data
     }
 }

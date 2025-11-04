@@ -1,0 +1,16 @@
+current directory: /home/engine/project/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.6/ext/unf_ext
+/home/engine/.rvm/rubies/ruby-2.7.6/bin/ruby -I /home/engine/.rvm/rubies/ruby-2.7.6/lib/ruby/2.7.0 -r ./siteconf20251104-33822-19b6fk9.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /home/engine/project/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.6/ext/unf_ext
+make "DESTDIR=" clean
+
+current directory: /home/engine/project/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.6/ext/unf_ext
+make "DESTDIR="
+compiling unf.cc
+linking shared-object unf_ext.so
+
+current directory: /home/engine/project/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.6/ext/unf_ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20251104-33822-5a64vk

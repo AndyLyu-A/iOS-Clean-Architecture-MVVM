@@ -55,3 +55,29 @@ https://user-images.githubusercontent.com/6785311/236615779-153ef846-ae0b-4ce8-9
 ## Requirements
 * Xcode Version 11.2.1+  Swift 5.0+
 
+## Sign in with Apple Setup
+
+This project includes Sign in with Apple authentication. To use this feature:
+
+### 1. Enable Sign in with Apple Capability
+- Open the project in Xcode
+- Select the `ExampleMVVM` target
+- Go to "Signing & Capabilities"
+- Click "+ Capability" and add "Sign in with Apple"
+
+### 2. Configure Apple Developer Account
+- Ensure your app's bundle identifier is registered in your Apple Developer account
+- Enable "Sign in with Apple" capability for your App ID in the Apple Developer portal
+- The feature works in both development and production builds
+
+### 3. Team ID and Bundle Identifier
+- Update the bundle identifier and team ID in the Xcode project settings
+- The default service name for Keychain storage is derived from the bundle identifier
+
+### Architecture
+The authentication implementation follows Clean Architecture:
+- **Domain Layer**: `UserProfile` entity, `AuthRepository` and `SecureStorageRepository` protocols, and auth use cases
+- **Data Layer**: `DefaultAuthRepository` with `ASAuthorizationAppleIDProvider`, `KeychainSecureStorageRepository` for secure credential storage
+- **Presentation Layer**: `OnboardingViewController` with `ASAuthorizationAppleIDButton`, `OnboardingViewModel` managing auth state
+- **Flow**: `HealthFlowCoordinator` checks auth state on launch and routes between onboarding and dashboard
+

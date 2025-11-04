@@ -48,6 +48,15 @@ It also uses UITableViewDiffableDataSource:
 ## How to use app
 To search a movie, write a name of a movie inside searchbar and hit search button. There are two network calls: request movies and request poster images. Every successful search query is stored persistently.
 
+### HealthKit Dashboard
+The app now includes a Health Dashboard that integrates with Apple HealthKit to display key health metrics:
+- **Steps**: Daily step count
+- **Heart Rate**: Most recent resting heart rate
+- **Sleep**: Total sleep duration for the day
+- **Active Minutes**: Daily exercise time
+
+**Note**: The app requires HealthKit permissions to display health data. When first launching the app, you will be prompted to grant access to your health data. You can manage these permissions in iOS Settings > Privacy > Health.
+
 
 https://user-images.githubusercontent.com/6785311/236615779-153ef846-ae0b-4ce8-908a-57fca7158b9d.mp4
 

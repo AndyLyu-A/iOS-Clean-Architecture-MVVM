@@ -33,4 +33,8 @@ final class AppDIContainer {
         )
         return MoviesSceneDIContainer(dependencies: dependencies)
     }
+    
+    func makeHealthDashboardSceneDIContainer() -> HealthDashboardSceneDIContainer {
+        return HealthDashboardSceneDIContainer()
+    }
 }

@@ -33,4 +33,9 @@ final class AppDIContainer {
         )
         return MoviesSceneDIContainer(dependencies: dependencies)
     }
+    
+    func makeHealthSceneDIContainer() -> HealthSceneDIContainer {
+        let dependencies = HealthSceneDIContainer.Dependencies()
+        return HealthSceneDIContainer(dependencies: dependencies)
+    }
 }
